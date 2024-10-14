@@ -1,0 +1,13 @@
+name: my-first-workflow
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: executing the script
+        run: echo "executed"
+        
+      - name: listing the files
+        run: ls
