@@ -21,6 +21,3 @@ jobs:
 
      - name: Welcome
        run: echo ' Good Evening'
-
-     - name: Welcome
-       run: echo ' Good Evening'
