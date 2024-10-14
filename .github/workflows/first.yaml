@@ -1,0 +1,17 @@
+name: fisrt-workflow
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Excecute first job
+       run: echo "Excecuted"
+
+     - name: List Files
+       run: ls
+
+     - name: Read the file
+       run: cat README.md
+
