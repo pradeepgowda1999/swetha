@@ -6,9 +6,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-        
-      - name: Checkout
-        uses: actions/checkout@v4
+
+     - name: Checkout
+       uses: actions/checkout@v4
 
      - name: Excecute first job
        run: echo "Excecuted"
