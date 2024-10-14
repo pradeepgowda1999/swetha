@@ -17,3 +17,6 @@ jobs:
 
       - name: Read the file
         run: cat README.md
+
+      - name: excecuting the linux commands
+        run: free -m
