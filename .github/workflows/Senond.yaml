@@ -23,3 +23,8 @@ jobs:
       
       - name: excecuting the linux commands
         run: df -kh
+
+      - name: excecuting linux commands
+        run: df -kh
+
+      

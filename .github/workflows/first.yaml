@@ -20,4 +20,14 @@ jobs:
        run: cat README.md
 
      - name: Welcome
-       run: echo ' Good Evening'
+       run: echo 'Good Evening'
+    
+  second_job:
+    needs: first_job
+    runs_on: ubuntu-latest
+    steps:
+
+     - name: Excecuting linux commands
+       run: free -m && df -kh 
+
+     
