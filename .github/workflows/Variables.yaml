@@ -1,0 +1,27 @@
+name: variables
+on: push
+
+env:
+  CONTAINER_REGISTRY: docker.io
+  DOCKER_USERNAME: pradeep653
+  IMAGE_NAME: github-actions
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker build
+        run:  docker build -t $CONTAINER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:latest
+      - name: docker login
+        env:
+          DOCKER_PASSWORD: Reset@685801
+        run:  docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
+      - name: docker push
+        run: docker push $CONTAINER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:latest
+
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker run
+        run: docker run -d -p 8080:80 $CONTAINER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:latest
