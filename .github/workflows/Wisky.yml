@@ -14,4 +14,6 @@ jobs:
       run: ls -lrta
 
     - name: Executing the shell script
-      run: .github/workflows/askii-shell-script.sh
+      run: |
+      chmod +x .github/workflows/askii-shell-script.sh
+      .github/workflows/askii-shell-script.sh
