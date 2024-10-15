@@ -15,5 +15,5 @@ jobs:
 
     - name: Executing the shell script
       run: |
-      chmod +x .github/workflows/askii-shell-script.sh
-      .github/workflows/askii-shell-script.sh
+        chmod +x .github/workflows/askii-shell-script.sh
+        .github/workflows/askii-shell-script.sh
