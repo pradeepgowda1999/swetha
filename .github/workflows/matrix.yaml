@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, ubuntu-20.04]
-        images: [hellow-world, busybox] 
+        images: [hellow-world, alpine] 
     runs-on: ${{ matrix.os }}
     steps:
     - name: docker details
