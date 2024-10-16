@@ -19,7 +19,7 @@ jobs:
             
     runs-on: ${{ matrix.os }}
     steps:
-    - name: docker details
+    - name: docker set-up
       run: docker info
   
     - name: run the docker image
