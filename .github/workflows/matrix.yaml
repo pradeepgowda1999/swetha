@@ -3,22 +3,20 @@ name: matix
 on: push
 
 jobs:
-  docker-deploy-to-ubuntu:
-    runs-on: ubuntu-latest
+  docker-deploy:
+    stratergy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, ubuntu-20.04]
+        images: [hellow-world, busybox]
+        images: 
+    runs-on: ${{ matrix.os}}
     steps:
     - name: docker details
       run: docker info
   
     - name: run the docker image
-      run: docker run hello-world
+      run: docker run ${{ matrix.images}}
 
-  docker-deploy-to-windows:
-    runs-on: windows-latest
-    steps:
-    - name: docker details
-      run: docker info
   
-    - name: run the docker image
-      run: docker run hello-world
 
 
