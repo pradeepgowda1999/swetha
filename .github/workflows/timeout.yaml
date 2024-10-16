@@ -1,0 +1,30 @@
+name: timeout option 
+
+on: 
+  push
+  
+jobs:
+  timeout-minutes: 1
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo " Good Morning"
+
+      - name: command
+        run: sleep 30
+
+  Deploy:
+    needs: docker
+    concurrency:
+      group: production-deployment
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo " Good evening"
+
+      - name: sleep
+        run: sleep 120
