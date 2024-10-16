@@ -1,0 +1,28 @@
+name: event-triggers
+
+on: 
+  workflow_dispatch:
+  # schedule: 
+  #  - cron: "*/1 * * * *"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo " Good Morning"
+
+  Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo " Good evening"
+
+      -name: sleep
+       run: sleep 240
+    
+
+
+      
