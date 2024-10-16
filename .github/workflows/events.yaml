@@ -2,7 +2,7 @@ name: event-triggers
 
 on: 
   schedule: 
-  - cron: "*/1 * * * *"
+   - cron: '*/1 * * * *'
 
 jobs:
   event_job:
