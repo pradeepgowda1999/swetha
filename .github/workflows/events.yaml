@@ -1,0 +1,13 @@
+name: event-triggers
+
+on: 
+  schedule: 
+  - cron: "*/1 * * * *"
+
+jobs:
+  event_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo " Good Morning"
