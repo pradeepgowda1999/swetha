@@ -7,15 +7,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, ubuntu-20.04]
-        images: [hellow-world, busybox]
-        images: 
-    runs-on: ${{ matrix.os}}
+        images: [hellow-world, busybox] 
+    runs-on: ${{ matrix.os }}
     steps:
     - name: docker details
       run: docker info
   
     - name: run the docker image
-      run: docker run ${{ matrix.images}}
+      run: docker run ${{ matrix.images }}
 
   
 
