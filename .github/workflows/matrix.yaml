@@ -4,21 +4,21 @@ on: push
 
 jobs:
   docker-deploy-to-ubuntu:
-  runs-on: ubuntu-latest
-  steps:
-  - name: docker details
-    run: docker info
+    runs-on: ubuntu-latest
+    steps:
+    - name: docker details
+      run: docker info
   
-  - name: run the docker image
-    run: docker run hello-world
+    - name: run the docker image
+      run: docker run hello-world
 
   docker-deploy-to-windows:
-  runs-on: windows-latest
-  steps:
-  - name: docker details
-    run: docker info
+    runs-on: windows-latest
+    steps:
+    - name: docker details
+      run: docker info
   
-  - name: run the docker image
-    run: docker run hello-world
+    - name: run the docker image
+      run: docker run hello-world
 
 
