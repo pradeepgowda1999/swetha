@@ -4,9 +4,10 @@ on:
   push:
     #branches:
      # - 'feature/branch-1' 
+
     branches-ignore: 
       - 'main'  
-     # - 'main/*'
+      - 'main/*'
 jobs:
   job1:
     runs-on: ubuntu-latest
