@@ -2,8 +2,8 @@ name: filters and activities
 
 on:
   push:
-    branches:
-      - 'feature/branch-1' 
+    #branches:
+     # - 'feature/branch-1' 
     branches-ignore: 
       - 'main'  
      # - 'main/*'
