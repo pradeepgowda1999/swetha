@@ -1,0 +1,16 @@
+name: filters and activities
+
+on:
+  workflow_dispatch:
+  push:
+   # branches:
+    #  - 'feature/branch-1' 
+    branches-ignore: 
+      - 'main'  
+      - 'main/*'
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Namaste swetha
+        run: echo "Good afternoon"
