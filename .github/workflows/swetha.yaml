@@ -2,8 +2,6 @@ name: filters and activities
 
 on:
   push:
-    branches:
-      - 'feature/branch-1'  # Include feature branch
     branches-ignore:
       - 'main'              # Exclude the main branch
       - 'main/*'            # Exclude sub-branches of main
