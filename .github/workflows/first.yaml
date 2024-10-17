@@ -24,10 +24,10 @@ jobs:
     
   second_job:
     needs: first_job
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
 
-     - name: Excecuting linux commands
+     - name: Excecuting linux commandss
        run: free -m && df -kh 
 
      
