@@ -1,0 +1,23 @@
+name: conditioanl-expression
+
+on: push
+
+jobs:
+  docker:
+   runs-on: ubuntu-latest
+   steps:
+    - name: docker 
+      run: echo "Good Morning"
+  
+  k8s:
+   if: github.ref == 'refs/heads/main'
+   runs-on: ubuntu-latest
+   steps:
+    - name: docker 
+      run: echo "Good Morning"
+  
+  
+
+
+
+
