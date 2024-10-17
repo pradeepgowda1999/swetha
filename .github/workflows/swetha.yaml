@@ -2,15 +2,15 @@ name: filters and activities
 
 on:
   push:
-    #branches:
-     # - 'feature/branch-1' 
+    branches:
+      - 'feature/branch-1'  # Include feature branch
+    branches-ignore:
+      - 'main'              # Exclude the main branch
+      - 'main/*'            # Exclude sub-branches of main
 
-    branches-ignore: 
-      - 'main'  
-      - 'main/*'
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Namaste swetha
+      - name: Namaste Swetha
         run: echo "Good afternoon"
