@@ -3,8 +3,8 @@ name: filters and activities
 on:
   push:
     branches:
-       - main
-       - '!feature/*'   #ignore the pushing to any branch
+       - '!main/*'
+       - 'feature/*'   
 
 jobs:
   job1:
