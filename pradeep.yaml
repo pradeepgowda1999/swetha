@@ -20,5 +20,5 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Namaste swetha
+      - name: Namaste swetha gowda
         run: echo "Good afternoon"
