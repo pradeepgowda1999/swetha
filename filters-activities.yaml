@@ -1,4 +1,4 @@
-name: filters ad activities
+name: filters and activities
 
 on:
   push:
