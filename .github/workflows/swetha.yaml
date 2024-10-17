@@ -3,9 +3,10 @@ name: filters and activities
 on:
   push:
     branches:
-       - '!main/*'
-       - 'feature/branch-1'   
-
+      - 'feature/branch-1' 
+    branches-ignore: 
+      - 'main'  
+     # - 'main/*'
 jobs:
   job1:
     runs-on: ubuntu-latest
