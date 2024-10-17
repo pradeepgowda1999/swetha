@@ -3,11 +3,19 @@ name: filters and activities
 on:
   workflow_dispatch:
   push:
-   # branches:
-    #  - 'feature/branch-1' 
-    branches-ignore: 
-      - 'main'  
-      - 'main/*'
+    branches:
+      - main
+      - '!feature/*''
+
+  pull_requests:
+    types:
+      - opened
+      - closed
+    paths-ignore:
+      - README.md
+    branches:
+      - main
+    
 jobs:
   job1:
     runs-on: ubuntu-latest
