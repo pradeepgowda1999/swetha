@@ -7,7 +7,7 @@ on:
       - main
       - '!feature/*'
 
-  pull_requests:
+  pull_request:
     types:
       - opened
       - closed
