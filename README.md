@@ -1,6 +1,4 @@
 # swetha
 first git-hub workflow
 Namaskara
-swetha
-gowda
-v
+swetha gowda v
